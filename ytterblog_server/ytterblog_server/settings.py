@@ -129,7 +129,7 @@ STATIC_URL = '/app/build/static/'
 
 # Place static in the same location as webpack build files
 STATIC_ROOT = '/app/build/static/'
-STATICFILES_DIRS = []
+STATICFILES_DIRS = ['/app/build/static']
 
 # If you want to serve user uploaded files add these settings
 # MEDIA_URL = '/media/'
