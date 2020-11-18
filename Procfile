@@ -1,1 +1,1 @@
-web: gunicorn ytterblog_server.wsgi
+web: gunicorn --pythonpath ytterblog_server ytterblog_server.wsgi
