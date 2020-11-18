@@ -128,7 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Place static in the same location as webpack build files
-STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
+STATIC_ROOT = os.path.join('app', 'build', 'static')
 STATICFILES_DIRS = []
 
 # If you want to serve user uploaded files add these settings
