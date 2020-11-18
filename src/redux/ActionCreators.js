@@ -15,7 +15,7 @@ export const submitPost = (newPost) => (dispatch) => {
             'Content-Type': 'application/json'
         }
     }
-    axios.post("http://localhost:8000/api/posts/", newPost, config)
+    axios.post("/api/posts/", newPost, config)
         .then(post => dispatch(addPost(newPost)))
         .then(() => dispatch(fetchPosts()))
         .catch(err => {dispatch(postCreationFailed(err.message)); console.log(err)});
@@ -46,7 +46,7 @@ export const editPost = (post) => (dispatch) => {
         }
     }
 
-    axios.put("http://localhost:8000/api/posts/" + post.id + "/", {title: post.title, body: post.body, user: post.user}, config)
+    axios.put("/api/posts/" + post.id + "/", {title: post.title, body: post.body, user: post.user}, config)
         .then(post => dispatch(postEdited(post)))
         .then(() => dispatch(fetchPosts()))
         .catch(err => {dispatch(postEditFailed(err.message)); console.log(err)});
@@ -78,7 +78,7 @@ export const deletePost = (postId) => (dispatch) => {
     //     }
     // }
     
-    axios.delete("http://localhost:8000/api/posts/" + postId)
+    axios.delete("/api/posts/" + postId)
         .then(post => dispatch(postDeleted(post)))
         .then(() => dispatch(fetchPosts()))
         .catch(errmess => dispatch(postDeleteFailed(errmess)));
@@ -104,7 +104,7 @@ export const fetchPosts = () => (dispatch) => {
     axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 
 
-    axios.get("http://localhost:8000/api/posts/")
+    axios.get("/api/posts/")
         .then(posts => dispatch(addPosts(posts)))
         .catch(err => {dispatch(postsLoadingFailed(err.message)); console.log(err)});
 }
