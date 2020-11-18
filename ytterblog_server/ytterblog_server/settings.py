@@ -37,12 +37,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.messages'
 ]
 
 MIDDLEWARE = [
@@ -125,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/build/static/'
+STATIC_URL = '/app/build/static/'
 
 # Place static in the same location as webpack build files
 STATIC_ROOT = '/app/build/static/'
