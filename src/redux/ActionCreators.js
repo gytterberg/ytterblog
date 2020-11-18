@@ -94,7 +94,7 @@ export const postDeleteFailed = (errmess) => ({
     payload: errmess
 })
 
-// fetch posts ===============================
+// fetch posts ===============================###
 
 export const fetchPosts = () => (dispatch) => {
     dispatch(postsLoading());
