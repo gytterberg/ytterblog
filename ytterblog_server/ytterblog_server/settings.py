@@ -125,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/build/static/'
 
 # Place static in the same location as webpack build files
 STATIC_ROOT = '/app/build/static/'
