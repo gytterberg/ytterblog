@@ -31,8 +31,7 @@
     "start": "PUBLIC_URL=http://localhost:3000/ react-scripts start",
     "build": "PUBLIC_URL=http://ytterb.org/ react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "react-scripts start"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
