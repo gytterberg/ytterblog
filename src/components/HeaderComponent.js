@@ -29,7 +29,7 @@ class Header extends Component {
                    <div className="container">
 
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src={"/build/favicon-32x32.png"} height="32" width="32" alt='GY' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src={"/build/static/favicon-32x32.png"} height="32" width="32" alt='GY' /></NavbarBrand>
                         {console.log(process.env.PUBLIC_URL + "favicon-32x32.png")}
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="mr-auto" navbar>
@@ -46,7 +46,7 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-                <Jumbotron style={{ backgroundImage: "url(/build/photosquat-cropped.jpg)", backgroundSize: 'cover' }}>
+                <Jumbotron style={{ backgroundImage: "url(/build/static/photosquat-cropped.jpg)", backgroundSize: 'cover' }}>
                     <Container className="jumbo-text col-md-offset-4">
                         <div className="header header-text">
                             <h3>ytterb.org</h3>

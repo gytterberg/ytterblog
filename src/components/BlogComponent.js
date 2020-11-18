@@ -153,7 +153,7 @@ class Blog extends Component {
             <Card className="postcard">
                 <CardBody>
                     <Media>
-                        <Media left href="#"><Media object src="/favicon-32x32.png" alt="placeholder" className="avatar"/></Media>
+                        <Media left href="#"><Media object src="/build/static/favicon-32x32.png" alt="placeholder" className="avatar"/></Media>
                         <Media body>
                             <Media heading>
                                 {post.title}
