@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath ytterblog_server ytterblog_server.wsgi
