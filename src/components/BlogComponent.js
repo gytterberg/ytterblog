@@ -123,7 +123,7 @@ class Blog extends Component {
                 else
                     return 1;
             })
-            // render each post individually
+            // render each post individually #####
             const renderedposts = sortedposts.map((post) => {
                 return (
                     <div>
