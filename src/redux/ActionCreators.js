@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes';
 
 import axios from 'axios';
 
-// submission ===============================
+// post submission ===============================
 
 export const submitPost = (newPost) => (dispatch) => {
     console.log("Submit: title: ", newPost.title, " body: ", newPost.body, " user: ", newPost.user);
