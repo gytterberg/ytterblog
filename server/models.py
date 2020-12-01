@@ -11,6 +11,7 @@ class Post(models.Model):
     body = models.TextField()
     posted = models.DateTimeField(auto_now_add=True)
     user = models.CharField(max_length=120)
+    protected = models.BooleanField(default=False)
 
     def _str_(self):
         return self.title

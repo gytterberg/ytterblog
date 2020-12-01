@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter, Link, NavLink, useHistory } from 'react-router-dom';
+import { withRouter, } from 'react-router-dom';
 
 import {
-    Container, Row, Col, Media,
+    Container, Row, Col,
     Modal, ModalHeader, ModalBody, ModalFooter,
     Form, FormGroup, Label, Input,
-    Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardFooter,
     Button,
     } from 'reactstrap';
 

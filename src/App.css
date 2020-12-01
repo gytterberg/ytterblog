@@ -45,7 +45,7 @@
   right: 0px;
   bottom: 0px;
   margin: 0 auto;
-  background:  #1a3db0;
+  background:  none;
   color:floralwhite;
 }
 
@@ -66,16 +66,22 @@
 
 .footer{
   background-color: #1a3db0;
-  margin:0px auto;
+  margin-top: 50px;
   padding: 20px 0px 20px 0px;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  /* bottom: 0; */
+  /* width: 100%; */
 }
 
 .footer-text{
   color: #dbdbdb;
   text-align: center;
 }
+
+/* .footer-text a{
+  color: #dbdbdb;
+  text-align: right;
+} */
 
 .avatar{
   height: 100;
@@ -86,4 +92,23 @@
 
 .postcard{
   margin: 50px 0px 50px 0px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 20px;
+}
+
+dt {
+  grid-column-start: 1;
+}
+
+dd {
+  grid-column-start: 2;
+}
+
+.card {
+  padding-right: 0!important;
+  padding-left: 0!important;
 }

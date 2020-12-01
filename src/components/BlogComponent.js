@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link, NavLink } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 
 import {
     Container, Row, Col, Media,
-    Modal, ModalHeader, ModalBody, ModalFooter,
-    Form, FormGroup, Label, Input,
-    Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardFooter,
+    Card, CardBody, CardFooter,
     Button,
     } from 'reactstrap';
 
@@ -40,14 +38,6 @@ class Blog extends Component {
         this.props.fetchPosts();
     }
 
-    // componentDidMount() {
-    //     this.props.fetchPosts();
-    // }
-
-    // componentDidUpdate() {
-    //     this.props.fetchPosts();
-    // }
-
     toggleCreateModal() {
         this.setState({ createModal: !this.state.createModal });
         console.log("In togglecreate, state: ", JSON.stringify(this.state));
@@ -67,7 +57,6 @@ class Blog extends Component {
             user: user,
         }
         this.props.submitPost(newPost);
-        // this.props.fetchPosts();
     };
 
     handleEdit(title, body, user, id) {
@@ -81,7 +70,6 @@ class Blog extends Component {
         }
         console.log("In handleEdit, newPost: ", JSON.stringify(newPost));
         this.props.editPost(newPost);
-        // this.props.fetchPosts()
         this.toggleEditModal();
         this.setState({editPost: {}})
 
@@ -96,7 +84,6 @@ class Blog extends Component {
 
         this.toggleEditModal();
         this.setState({editPost: {}})
-        // this.props.fetchPosts()
 
 
     }
@@ -123,7 +110,7 @@ class Blog extends Component {
                 else
                     return 1;
             })
-            // render each post individually #####
+            // render each post individually
             const renderedposts = sortedposts.map((post) => {
                 return (
                     <div>
@@ -188,8 +175,7 @@ class Blog extends Component {
                     <Col className="text-right">
                         <Button onClick={() => {console.log("Create post button clicked"); this.toggleCreateModal()}} color="primary">Create Post</Button>
                     </Col>
-                        {this.props.isLoading ? <Loading /> : this.renderPosts()}
-                        {/* {this.props.errMess} */}
+                        {this.props.isLoading ? <Loading className="text-center"/> : this.renderPosts()}
                 </Row>
                     {this.state.createModal ? <PostModal handleSubmit={this.handleCreate}
                                                             toggle={this.toggleCreateModal}

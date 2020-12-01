@@ -157,6 +157,14 @@ CORS_ALLOW_HEADERS = default_headers + (
     'Access-Control-Allow-Origin',
 )
 
+CORS_ALLOW_METHODS = (
+        'GET',
+        'POST',
+        'PUT',
+        'PATCH',
+        'DELETE',
+        'OPTIONS'
+    )
 # CORS_ORIGIN_ALLOW_ALL = True
 
 # Activate Django-Heroku.

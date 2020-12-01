@@ -72,13 +72,7 @@ export const deletePost = (postId) => (dispatch) => {
     axios.defaults.xsrfCookieName = 'csrftoken';
     axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 
-    // const config = {
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // }
-    
-    axios.delete("/api/posts/" + postId)
+    axios.delete("/api/posts/" + postId + "/")
         .then(post => dispatch(postDeleted(post)))
         .then(() => dispatch(fetchPosts()))
         .catch(errmess => dispatch(postDeleteFailed(errmess)));
