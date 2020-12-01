@@ -1,20 +1,20 @@
 import React from 'react';
-import { Container, Jumbotron } from 'reactstrap';
+import { Col, Container, Jumbotron } from 'reactstrap';
 
 
-const Footer = () => {
+const Photojumbo = () => {
     return(
         <Container className="jumbo-text ">
             <Jumbotron  className="" style={{ backgroundImage: "url(/static/photosquat-cropped.jpg)", backgroundSize: 'cover' }}>
 
-                <div className="header header-text   offset-6" >
+                <Col className="header header-text col-md-5 offset-md-6" >
                     <h3>ytterblog</h3>
                     <p>A blog app and portfolio project by Gabriel Ytterberg</p>
-                </div>
+                </Col>
 
             </Jumbotron>
         </Container>
     )
 }
 
-export default Footer;
+export default Photojumbo;

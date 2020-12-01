@@ -28,8 +28,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "PUBLIC_URL=http://localhost:8000/ react-scripts start",
+    "start": "PUBLIC_URL=http://localhost:3000/ react-scripts start",
     "build": "PUBLIC_URL=https://ytterblog.herokuapp.com/ react-scripts build",
+    "build-local": "PUBLIC_URL=http://localhost:8000/ react-scripts build && python manage.py collectstatic --noinput",
     "postbuild": "python manage.py collectstatic --noinput",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

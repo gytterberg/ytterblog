@@ -7,14 +7,14 @@ import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Blog from './BlogComponent';
 import Contact from './ContactComponent';
-import Jumbotron from './JumbotronComponent';
 import About from './AboutComponent';
+import Photojumbo from './JumbotronComponent';
 
 const Main = (props) => {
     return (
         <div>
             <Header />
-            <Jumbotron />
+            <Photojumbo />
             <Switch location={props.location}>
                 <Route path='/home' component={Home} />
                 <Route exact path='/blog' component={withRouter(Blog)} />
