@@ -170,7 +170,7 @@ class Blog extends Component {
                 <Row>
                     <Col className="text-left">
                         {this.state.postId ? <Button color="link"><NavLink to="/blog">&lt; Back to all posts</NavLink></Button>
-                                            : null }
+                                            : <h2>All posts</h2> }
                     </Col>
                     <Col className="text-right">
                         <Button onClick={() => {console.log("Create post button clicked"); this.toggleCreateModal()}} color="primary">Create Post</Button>

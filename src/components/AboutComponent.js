@@ -12,6 +12,7 @@ class About extends Component {
             dbOpen: false,
             reduxOpen: false,
             buildOpen: false,
+            herokuOpen: false,
         }
         this.toggleCard = this.toggleCard.bind(this);
     }
@@ -23,6 +24,8 @@ class About extends Component {
             case 'dbOpen': this.setState({dbOpen: !this.state.dbOpen}); break;
             case 'reduxOpen': this.setState({reduxOpen: !this.state.reduxOpen}); break;
             case 'buildOpen': this.setState({buildOpen: !this.state.buildOpen}); break;
+            case 'herokuOpen': this.setState({herokuOpen: !this.state.herokuOpen}); break;
+
             default: break;
         }
     }
@@ -31,9 +34,11 @@ class About extends Component {
         return (
             <Container>
                 <h2>About this site</h2>
+                <hr/>
                 <Row>
                     <Col className="col-md-6">
                         <p>This is a breakdown of the stack, explaining the structure of the app and what each component does and why it was chosen.</p>
+                        <br/><br/>The code is available to view <a href="https://github.com/gytterberg/ytterblog" rel="noreferrer" target="_blank">on my GitHub repository.</a>
                     </Col>
                     <Card className="col-md-4 card">
                         <CardHeader className="">The stack</CardHeader>
@@ -84,7 +89,7 @@ class About extends Component {
                         <CardImg  className="container-fluid" src="/static/models.png" style={{width: "456px"}} />
                         <CardBody>
                             <p>
-                                The blog posts are stored in Django's built in <strong>SQLite</strong> database. This is where the db model is configured, in models.py. The "id" field is the primary key and automatically handled by the database. The "protected" field allows me to prevent certain posts from being deleted or edited, while leaving the blog app open to any user to create update and delete unprotected posts.
+                                The blog posts are stored in a <strong>PostgreSQL</strong> database, managed by Django. This is where the db model is configured, in models.py. The "id" field is the primary key and automatically handled by the database. The "protected" field allows me to prevent certain posts from being deleted or edited, while leaving the blog app open to any user to create update and delete unprotected posts.
                                 <br/><br/>Database entries are serialized into JSON and served by Django through the REST API.
                             </p>
                         </CardBody>
@@ -104,8 +109,8 @@ class About extends Component {
                     </Collapse>
                 </Card>
                 <Card>
-                    <CardHeader onClick={() => this.toggleCard('reduxOpen')}>{ this.state.buildOpen ? <i className="fa fa-chevron-up"/> : <i className="fa fa-chevron-down"/> } Build and deploy to Heroku</CardHeader>
-                    <Collapse isOpen={this.state.reduxOpen}>
+                    <CardHeader onClick={() => this.toggleCard('herokuOpen')}>{ this.state.herokuOpen ? <i className="fa fa-chevron-up"/> : <i className="fa fa-chevron-down"/> } Build and deploy to Heroku</CardHeader>
+                    <Collapse isOpen={this.state.herokuOpen}>
                         <CardImg className="container-fluid" src="/static/packagejson.png" style={{width: "673px"}} />
                         <CardBody>
                             <p><strong>Heroku</strong> provides powerful and simple app hosting. The build process begins with <strong>git</strong>. Changes are committed to the git repository, then pushed to the Heroku remote. This triggers Heroku's build process, which begins with building the JavaScript portion of the app.
